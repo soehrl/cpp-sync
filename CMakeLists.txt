@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.14) # 3.14 is required for CPM
 
-project(sync CXX)
+project(
+    sync
+    VERSION 0.1.0
+    LANGUAGES CXX
+)
 
 set(SYNC_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
 
