@@ -3,7 +3,7 @@
 #include <mutex>
 #include <utility>
 
-namespace sync {
+namespace cppsync {
 
 template <typename Mutex, typename T> class unique_lock_guard {
   public:

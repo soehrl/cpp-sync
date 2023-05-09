@@ -5,7 +5,7 @@
 #include <shared_mutex>
 #include <utility>
 
-namespace sync {
+namespace cppsync {
 
 // [17.6.5.9/1] This section specifies requirements that implementations shall meet to prevent data races (1.10). Every standard library
 // function shall meet each requirement unless otherwise specified. Implementations may prevent data races in cases other than those

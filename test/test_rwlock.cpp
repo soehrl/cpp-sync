@@ -2,7 +2,7 @@
 #include <catch2/catch_test_macros.hpp>
 
 TEST_CASE("Read Write Lock") {
-    sync::read_write_lock<int> rwlock(100);
+    cppsync::read_write_lock<int> rwlock(100);
 
     SECTION("Simultaneous reads") {
         auto value = rwlock.read();

@@ -5,7 +5,7 @@
 #include <thread>
 
 TEST_CASE("Mutex") {
-    sync::mutex<int> mutex(100);
+    cppsync::mutex<int> mutex(100);
 
     {
         auto value = mutex.lock();
@@ -25,7 +25,7 @@ TEST_CASE("Mutex") {
 }
 
 TEST_CASE("Heavy Thread Load") {
-    sync::mutex<std::map<int, int>> mutex({});
+    cppsync::mutex<std::map<int, int>> mutex({});
 
     constexpr auto THREAD_COUNT = 100;
     constexpr auto INSERT_COUNT = 10000;
@@ -52,7 +52,7 @@ TEST_CASE("Timed Mutex") {
     using namespace std::chrono_literals;
     using Clock = std::chrono::steady_clock;
 
-    sync::timed_mutex<int> mutex(100);
+    cppsync::timed_mutex<int> mutex(100);
 
     for (int i = 0; i < 10; ++i) {
         auto value = mutex.try_lock_for(10ms);
